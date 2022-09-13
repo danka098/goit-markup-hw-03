@@ -4,7 +4,6 @@
   --active-elements-color: #2196f3;
 }
 body {
-  max-width: 1600px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -13,14 +12,23 @@ body {
   box-sizing: border-box;
 }
 .container {
-  padding-left: 13.44%;
-  padding-right: 13.44%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
 }
 ul,
 li {
   list-style-type: none;
   list-style: none outside;
+  margin: 0;
   padding: 0;
+}
+img {
+  display: block;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -29,12 +37,10 @@ li {
   display: flex;
 }
 .logo-container {
-  flex-basis: 20.34%;
   align-items: center;
-  padding: 24px 0 25px 0;
+  padding: 24px 93px 25px 0;
 }
 .menu {
-  flex-basis: 53.41%;
   display: flex;
   align-items: center;
 }
@@ -56,7 +62,7 @@ li {
   align-items: center;
 }
 .header__contact {
-  flex-basis: 25.21%;
+  margin-left: auto;
 }
 .header__contact-link {
   color: var(--secondary-color);
@@ -82,6 +88,8 @@ li {
 }
 .banner {
   height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +100,7 @@ li {
       rgba(47, 48, 58, 0.4) 100%
     ),
     url("../images/banner.jpeg");
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .banner__title {
@@ -125,33 +134,26 @@ li {
 .feature__title {
   font-size: 14px;
   line-height: 1.143;
-  margin-bottom: 9px;
+  margin-top: 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 .feature__item-list {
   display: flex;
+  gap: 30px;
   justify-content: space-between;
-}
-.feature__item {
-  flex-basis: 23.2%;
 }
 .feature__text {
   font-size: 14px;
   line-height: 1.714;
   color: var(--secondary-color);
-}
-.feature,
-.projects {
-  padding-top: 94px;
+  margin: 0;
 }
 .projects__img-list,
 .team__members-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.projects {
-  padding-bottom: 94px;
 }
 .projects__title,
 .team__title {
@@ -161,10 +163,13 @@ li {
   text-align: center;
   margin-bottom: 50px;
 }
+.projects,
+.team,
+.gallery__projects {
+  padding-bottom: 94px;
+}
 .team {
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .team__member {
   background-color: #ffffff;
@@ -225,7 +230,6 @@ li {
   display: flex;
   gap: 8px;
   justify-content: center;
-  padding-top: 94px;
   padding-bottom: 46px;
 }
 .gallery__filter-btn:hover,
@@ -243,9 +247,11 @@ li {
   justify-content: space-between;
 }
 .projects__item {
+  margin-bottom: 30px;
+  gap: 30px;
+}
+.projects__caption {
   border: 1px solid #eeeeee;
-  flex-basis: 31.62%;
-  margin-bottom: 2.56%;
 }
 .projects__name {
   font-weight: 700;
